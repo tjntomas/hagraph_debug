@@ -394,11 +394,11 @@ function basehagraph(widget_id, url, skin, parameters)
 					var path = msg['result']['path']
 					var url = self.http_scheme  + "://" + BASE_URL + path + filter
 					var xhr = new XMLHttpRequest() 
-					Logger(self, "Url", url)
+					Logger(self,  url)
 					xhr.open("GET", url, false)
 					xhr.send()
 					var res = JSON.parse(xhr.response)
-					Logger(self,"result", res)
+					Logger(self, res)
 					callback(self, res, index)
 				}
 			 }
